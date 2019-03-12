@@ -22,13 +22,18 @@
         -function: now only support 'root', 'linear' and square'. Used to adjust alpha by number_of_records_left / total_number_records.
 
 5) Learning Random Cutset Network (RCN): structure is random while parameters are learnt  
+
     i) learn structure
+    
     python cnr.py  -purpose 'structure' -dir   '../dataset/'   -data_name   'nltcs'  -min_depth 1 -max_depth 5
+    
     ii) learn parameters
+    
     python cnr.py  -purpose 'parm' -dir   '../dataset/'   -data_name   'nltcs'  -depth 1  -input_dir '../mt_output/' -input_module 'nltcs_5'
+    
     -input_dir and -input_module: the MAP intractable module that used to update the parameters
-    Note: as the structure is given, we don't need to specify the 'alpha' and 'function'. alpha will be chosen from 0 to 1.0 with 0.1 intervals
-        function will be chosen from 'root', 'linear' and square'. The output (stored) module is the optimal one with current setting.
+    
+    Note: as the structure is given, we don't need to specify the 'alpha' and 'function'. alpha will be chosen from 0 to 1.0 with 0.1 intervals, function will be chosen from 'root', 'linear' and square'. The output (stored) module is the optimal one with current setting.
 
 6) Learning Bags of Cutset networks
 python cnet_bag.py  -dir   '../dataset/'   -data_name   'nltcs'  -ncomp   5 -max_depth   5   -sel_opt   0 -depth_option 0
