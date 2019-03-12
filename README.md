@@ -40,11 +40,11 @@
     python cnet_bag.py  -dir   '../dataset/'   -data_name   'nltcs'  -ncomp   5 -max_depth   5   -sel_opt   0 -depth_option 0
 
         -sel_opt: could be 0 or 1.
-        0 means optimaly select OR node  using MI; 1 means select OR node from 0.5 percent of all varibles
-         -depth_option: could be 0,1 or 2 
-        0 means all cnets have the same depth (max depth)
-        1 means the depth of cnets are randomly choosing from 1 to 6
-        2 means the depht of cnets are choosed seqencially from 1 to 6
+            0 means optimaly select OR node  using MI; 1 means select OR node from 0.5 percent of all varibles
+        -depth_option: could be 0,1 or 2 
+            0 means all cnets have the same depth (max depth)
+            1 means the depth of cnets are randomly choosing from 1 to 6
+            2 means the depht of cnets are choosed seqencially from 1 to 6
 
 
 7) The MAP inference: output are MAP tuples of the test dataset as well as the LL score for the MAP tuples:
