@@ -6,6 +6,7 @@
 2) Learning Mixture of Chow_Liu tree:
 
     python MIXTURE_CLT.py -dir   '../dataset/'   -data_name   'nltcs'  -ncomp   5  -max_iter   100   -epsilon   1e-7
+    
         -ncomp: how many components in the mixture
         -max_iter and -epsilon: the stopping criteria
 
