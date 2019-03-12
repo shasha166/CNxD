@@ -17,43 +17,7 @@ import sys
 import copy
 import utilM
 
-
-
-## The internal node in the cutset network
-#class CNode:
-#
-#
-#    def __init__(self, var, weights, ids, id):
-#        
-#        self.var = var  # the variable id, the actual varible in the original dataset
-#        self.children = []    # only has 2 child
-#        self.weights = weights 
-#        self.value = 0.0
-#        self.ids = ids  # include the ids of self and all children
-#        self.id = id
-#        
-#        
-#
-#    def add_child(self, child):
-#
-#        self.children.append(child)
-#
-#
-#    def set_weights(self, weights):
-#                
-#        self.weights = weights
-#        #self.log_weights = np.log(self.weights)
-#    
-#    
-#    def sumout(self, child_value, weights):
-#        
-#        self.value = np.matmul(child_value, weights)
         
-        
-
-
-
-
 '''
 The Cutset network learned from dataset
 '''
