@@ -1,11 +1,13 @@
 # CNxD
 1) Learning Chow_Liu tree:
-python CLT_class.py -dir  '../dataset/'  -data_name  'nltcs'
+
+    python CLT_class.py -dir  '../dataset/'  -data_name  'nltcs'
 
 2) Learning Mixture of Chow_Liu tree:
-python MIXTURE_CLT.py -dir   '../dataset/'   -data_name   'nltcs'  -ncomp   5  -max_iter   100   -epsilon   1e-7
-    -ncomp: how many components in the mixture
-    -max_iter and -epsilon: the stopping criteria
+
+    python MIXTURE_CLT.py -dir   '../dataset/'   -data_name   'nltcs'  -ncomp   5  -max_iter   100   -epsilon   1e-7
+        -ncomp: how many components in the mixture
+        -max_iter and -epsilon: the stopping criteria
 
 3) Learning Cutset Network from Data
 python CNET_class.py  -dir   '../dataset/'   -data_name   'nltcs'  -max_depth  10
