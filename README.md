@@ -1,4 +1,6 @@
 # CNxD
+Runing enviornment: Python 2.7
+
 1) Learning Chow_Liu tree:
 
     python CLT_class.py -dir  '../dataset/'  -data_name  'nltcs'
