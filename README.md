@@ -11,12 +11,15 @@
         -max_iter and -epsilon: the stopping criteria
 
 3) Learning Cutset Network from Data
-python CNET_class.py  -dir   '../dataset/'   -data_name   'nltcs'  -max_depth  10
+
+    python CNET_class.py  -dir   '../dataset/'   -data_name   'nltcs'  -max_depth  10
 
 4) Learning CNxD
-python CNXD.py  -dir   '../dataset/'   -data_name   'nltcs'  -alpha  0.5  -function  'root' -min 1 -max 5  -input_module 'nltcs_5'
-    -alpha: the percentage of using data statistics to learn the cutset network,  0<=alpha<=1
-    -function: now only support 'root', 'linear' and square'. Used to adjust alpha by number_of_records_left / total_number_records.
+
+    python CNXD.py  -dir   '../dataset/'   -data_name   'nltcs'  -alpha  0.5  -function  'root' -min 1 -max 5  -input_module 'nltcs_5'
+    
+        -alpha: the percentage of using data statistics to learn the cutset network,  0<=alpha<=1
+        -function: now only support 'root', 'linear' and square'. Used to adjust alpha by number_of_records_left / total_number_records.
 
 5) Learning Random Cutset Network (RCN): structure is random while parameters are learnt  
     i) learn structure
