@@ -30,13 +30,15 @@
     ii) learn parameters
     
     python cnr.py  -purpose 'parm' -dir   '../dataset/'   -data_name   'nltcs'  -depth 1  -input_dir '../mt_output/' -input_module 'nltcs_5'
-    
-    -input_dir and -input_module: the MAP intractable module that used to update the parameters
+        
+        -input_dir and -input_module: the MAP intractable module that used to update the parameters
     
     Note: as the structure is given, we don't need to specify the 'alpha' and 'function'. alpha will be chosen from 0 to 1.0 with 0.1 intervals, function will be chosen from 'root', 'linear' and square'. The output (stored) module is the optimal one with current setting.
 
 6) Learning Bags of Cutset networks
+
 python cnet_bag.py  -dir   '../dataset/'   -data_name   'nltcs'  -ncomp   5 -max_depth   5   -sel_opt   0 -depth_option 0
+
     -sel_opt: could be 0 or 1.
         0 means optimaly select OR node  using MI; 1 means select OR node from 0.5 percent of all varibles
     -depth_option: could be 0,1 or 2 
@@ -46,13 +48,20 @@ python cnet_bag.py  -dir   '../dataset/'   -data_name   'nltcs'  -ncomp   5 -max
 
 
 7) The MAP inference: output are MAP tuples of the test dataset as well as the LL score for the MAP tuples
-    -module_type: 'cnxd', 'cn','rcn','mt' or 'bcnet'
-    -epercent: the percentage of evidence variables
-    -seq: the index of the the evidence variables records. e.g, if we have 5 sets of evidence, seq will be 0,1,2,3,5
+
+        -module_type: 'cnxd', 'cn','rcn','mt' or 'bcnet'
+        -epercent: the percentage of evidence variables
+        -seq: the index of the the evidence variables records. e.g, if we have 5 sets of evidence, seq will be 0,1,2,3,5
+    
     i) For Cutset Networks: cnxd, cn or rcn
+    
     python map_inference.py -module_type 'cnxd' -dir '../dataset/'   -data_name   'nltcs'  -depth 5 -epercent 0.2 -seq 0
+    
     ii) For mixture of mt
+    
     python map_inference.py -module_type 'mt' -dir '../dataset/'   -data_name   'nltcs'  -epercent 0.2 -seq 0 -input_module 'nltcs_5'
+    
     iii) For bags of cnets
+    
     python map_inference.py -module_type 'bcnet' -dir '../dataset/'   -data_name   'nltcs'  -epercent 0.2 -seq 0
 
