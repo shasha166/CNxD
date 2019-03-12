@@ -34,7 +34,7 @@ class BAG_CNET():
     #                  = 1 means the depth of cnets are randomly choosing from 1 to 6
     #                  = 2 means the depht of cnets are choosed seqencially from 1 to 6
     def learnStructure(self, dataset, n_components, max_depth, node_sel_option = 0, depth_sel_option =0):
-        print ("BAGS of CNET ......" )
+        #print ("BAGS of CNET ......" )
         # Shuffle the dataset
         
         self.n_components = n_components
@@ -106,49 +106,6 @@ class BAG_CNET():
         
         return ll_scores
     
-#    
-#    """
-#    FOR CNET_deep
-#    """
-#    
-#    def get_node_marginal(self, evid_list, var):
-#        #log_mixture_weight = np.log(self.mixture_weight)
-#        xprob_all = np.zeros(2)
-#        for i, t in enumerate(self.cnet_list):
-#            #print (t.topo_order)
-#            #print (cond_cpt_list[i])
-#            #p_xy =  utilM.get_prob_matrix(t.topo_order, t.parents, cond_cpt_list[i], ids)
-#            xprob =  t.get_node_marginal(evid_list, var)
-#            xprob_all += xprob * self.mixture_weight[i]
-#
-#        
-#        #normalize
-#        xprob_all[0] =  xprob_all[0] / (xprob_all[0] + xprob_all[1])
-#        xprob_all[1] = 1.0 - xprob_all[0]
-#        
-#        return xprob_all
-#    
-#    
-#    def get_edge_marginal(self, evid_list, edges):
-#        #log_mixture_weight = np.log(self.mixture_weight)
-#        xyprob_all = np.zeros((edges.shape[0],2,2))
-#        for i, t in enumerate(self.clt_list):
-#                                
-#            xyprob =  t.get_edge_marginal(evid_list, edges)
-#            xyprob_all += xyprob * self.mixture_weight[i]
-#
-#        
-#        #normalize
-#        xyprob_all =  Util.normalize1d_in_2d(xyprob_all)
-#        
-#        return xyprob_all
-
-#def reload_bcnet(filename):
-#    
-#    with open(filename + '.pkl', 'rb') as input:
-#        reload_bcnet = pickle.load(input)
-#    
-#    return reload_bcnet
 
 
 '''    
@@ -256,14 +213,6 @@ def main_bag_cnet():
     np.savetxt(output_dir  + data_name +'_component_weights.txt',bag_cnet.mixture_weight, delimiter=',')
     
     
-#    
-#    reload_bcn = load_bcn(output_dir, data_name)
-#    train_ll_rl = compute_ll_from_disk (reload_bcn, data_train) / data_train.shape[0]
-#    valid_ll_rl = compute_ll_from_disk (reload_bcn, data_valid) / data_valid.shape[0]
-#    test_ll_rl = compute_ll_from_disk (reload_bcn, data_test) / data_test.shape[0]
-#    print (train_ll_rl)
-#    print (valid_ll_rl)
-#    print (test_ll_rl)
 
     
 
