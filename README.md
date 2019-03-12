@@ -37,7 +37,7 @@
 
 6) Learning Bags of Cutset networks:
 
-python cnet_bag.py  -dir   '../dataset/'   -data_name   'nltcs'  -ncomp   5 -max_depth   5   -sel_opt   0 -depth_option 0
+    python cnet_bag.py  -dir   '../dataset/'   -data_name   'nltcs'  -ncomp   5 -max_depth   5   -sel_opt   0 -depth_option 0
 
     -sel_opt: could be 0 or 1.
         0 means optimaly select OR node  using MI; 1 means select OR node from 0.5 percent of all varibles
